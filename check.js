@@ -18,9 +18,10 @@ function checkHTML(){
 checkHTML();
 var obj = {}
 obj[location.href] = 1;
-obj[location.origin + "/diff.min.js"] = 1;
-obj[location.origin + "/check.js"] = 1;
-obj[location.origin + "/favicon.ico"] = 1;
+var kUrl = location.href.replace(/index.html$/,"")
+obj[kUrl + "diff.min.js"] = 1;
+obj[kUrl + "check.js"] = 1;
+obj[kUrl + "favicon.ico"] = 1;
 var N = {
     'visibility-state':1,
     paint:1,
