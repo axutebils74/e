@@ -8,6 +8,9 @@ function right(x){
 function wrong(x){
     d1.innerHTML += '<hr><span style="background-color: lightpink">'+x+'</span>'
 }
+window.onerror = function(e){
+    wrong(e)
+}
 function checkHTML(){
     if(html.replace(/\s/g,"") == rightHTML.replace(/\s/g,"")){
             right("index.html未被篡改")
