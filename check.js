@@ -30,7 +30,7 @@ function checkPerformanceEntries() {
     performance.getEntries().forEach(function(e){
         if(!N[e.entryType] && !obj[e.name]){
             obj[e.name] = 1;
-            wrong("未知资源："+e.name + "          "+e.entryType);
+            wrong("未知资源："+e.name);
         }
     })
 }
