@@ -7,7 +7,9 @@
         height: "100%",
         backgroundColor: "white",
         border: "1px solid black",
-        zIndex: 6448
+        zIndex: 6448,
+        display: "flex",
+        flexDirection: "column"
     }
     var popup = document.createElement('div');
     var iframe = document.createElement('iframe')
@@ -25,7 +27,7 @@
     popup.appendChild(iframe);
     document.body.appendChild(popup)
     var iframeDoc = iframe.contentDocument || iframe.contentWindow.document
-    iframeDoc.documentElement.innerHTML = ""
+    iframeDoc.documentElement.textContent = ""
     function wrong(x){
         iframeDoc.documentElement.innerHTML += '<hr><span style="background-color: lightpink">'+x+'</span>'
     }
