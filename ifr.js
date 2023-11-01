@@ -15,7 +15,7 @@
     var iframe = document.createElement('iframe')
     iframe.width="100%"
     iframe.height="100%"
-    for(i in popupStyle){
+    for(var i in popupStyle){
         popup.style[i] = popupStyle[i];
     }
     var button = document.createElement('button')
